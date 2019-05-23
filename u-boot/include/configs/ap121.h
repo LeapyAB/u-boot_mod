@@ -593,4 +593,13 @@
 
 #endif
 
+/*
+ * ===================
+ * Other configuration
+ * ===================
+ */
+
+/* Cache lock for stack */
+#define CONFIG_INIT_SRAM_SP_OFFSET	0xbd001800
+
 #endif /* _AP121_H */
