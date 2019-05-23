@@ -132,6 +132,9 @@ uchar default_environment[] = {
 #if defined(CONFIG_LSDK_KERNEL)
 	"lsdk_kernel=1\0"
 #endif
+#if defined(CONFIG_SILENT_CONSOLE)
+	"silent=1\0"
+#endif
 #if defined(CONFIG_EXTRA_ENV_SETTINGS)
 	CONFIG_EXTRA_ENV_SETTINGS
 #endif
