@@ -285,13 +285,8 @@ rel_start:
 	nop
 #endif
 
-#if (SOC_TYPE & QCA_AR934X_SOC) || \
-	(SOC_TYPE & QCA_QCA953X_SOC)
 	/* Setup stack in SRAM */
 	li t0, CONFIG_INIT_SRAM_SP_OFFSET
-#else
-	li t0, CFG_SDRAM_BASE + CFG_INIT_SP_OFFSET
-#endif
 	la sp, 0(t0)
 
 	la t9, bootstrap_board_init_f
