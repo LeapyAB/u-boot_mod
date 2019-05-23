@@ -17,7 +17,7 @@
 
 /* Wait only 1 second by default */
 #if !defined(CONFIG_BOOTDELAY)
-	#define CONFIG_BOOTDELAY	1
+	#define CONFIG_BOOTDELAY	0
 #endif
 
 /* Allow to disable console output, don't display console info */
