@@ -130,7 +130,9 @@
 		#define SCRIPT_HTTP_PART_2	\
 		"elif itest $cnt >= 3; then " \
 			"echo HTTP server is starting for firmware update...;" \
-			"setenv stop_boot 1;" \
+      "echo Disabling external watchdog;" \
+      "gpio c 24;" \
+      "setenv stop_boot 1;" \
 			"echo;" \
 			"httpd;" \
 		"elif itest $cnt < 3; then "
@@ -168,11 +170,15 @@
 				"echo;" \
 			"elif itest $cnt >= 7; then " \
 				"echo Starting network console...;" \
+        "echo Disabling external watchdog;" \
+        "gpio c 24;" \
 				"setenv stop_boot 1;" \
 				"echo;" \
 				"startnc;" \
 			"elif itest $cnt >= 5; then " \
 				"echo Starting U-Boot console...;" \
+        "echo Disabling external watchdog;" \
+        "gpio c 24;" \
 				"setenv stop_boot 1;" \
 				"echo;" \
 			SCRIPT_HTTP_PART_2 \

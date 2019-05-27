@@ -94,8 +94,8 @@
 #define CFG_ICACHE_SIZE		(64 * 1024)
 
 /* Environment related */
-#define CFG_ENV_IS_IN_FLASH	1
-#undef  CFG_ENV_IS_NOWHERE
+#undef CFG_ENV_IS_IN_FLASH
+#define  CFG_ENV_IS_NOWHERE
 
 /* Available commands */
 #define CONFIG_CMD_BOOTD
@@ -103,7 +103,7 @@
 #define CONFIG_CMD_DATE
 #define CONFIG_CMD_DHCP
 #define CONFIG_CMD_ECHO
-#define CONFIG_CMD_ENV
+#undef CONFIG_CMD_ENV
 #define CONFIG_CMD_FLASH
 #define CONFIG_CMD_GPIO
 #define CONFIG_CMD_HTTPD
